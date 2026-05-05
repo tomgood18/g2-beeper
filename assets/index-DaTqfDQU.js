@@ -2,7 +2,7 @@
    Connecting...`,items:["WAIT"]};case"loading":return{text:`   BEEPER
    Loading...`,items:["WAIT"]};case"platforms":return{text:`   BEEPER MESSAGES
    ${q.length} platform${q.length!==1?"s":""}`,items:[...q.map(t=>`${t.name} (${t.roomCount})`),"REFRESH"]};case"conversations":return{text:`   ${I?.name||""}
-   ${M.length} conversation${M.length!==1?"s":""}`,items:[...M.map(e=>L(e.name,28)),"BACK"]};case"thread":case"reply":{const e=K.slice(0,6).reverse();return{text:e.length>0?e.map(r=>{if(r.mine){const x=`You: ${L(r.text,28)}`,o=Math.max(0,56-x.length);return" ".repeat(o)+x}return`${L(r.sender,10)}: ${L(r.text,32)}`}).join(`
+   ${M.length} conversation${M.length!==1?"s":""}`,items:[...M.map(e=>L(e.name,28)),"BACK"]};case"thread":case"reply":{const e=K.slice(0,6).reverse();return{text:e.length>0?e.map(r=>{if(r.mine){const x=`You: ${L(r.text,28)}`,o=Math.max(0,96-x.length);return" ".repeat(o)+x}return`${L(r.sender,10)}: ${L(r.text,32)}`}).join(`
 `):"No messages",items:[...i.map(r=>L(r,24)),"VOICE","BACK"]}}case"listening":return{text:`   LISTENING...
    Speak your message`,items:["CANCEL"]};case"sending":return{text:`   SENDING...
    "${L(De,35)}"`,items:["WAIT"]};case"sent":return{text:`   SENT
